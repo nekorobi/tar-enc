@@ -18,13 +18,12 @@ Options:
       Use Camellia cipher.
       Default: AES (aes-256-cbc, PBKDF2, sha-256)
   -d, --decrypt
-	    Decrypt mode. It does not replace newer existing files (tar --keep-newer-files).
-      Default: Encrypt mode
+      Decrypt mode. (Default: Encrypt mode)
   -D, --directory Path
       Specify the destination directory path. (in Encrypt and Decrypt mode)
       Default: current directory
   -l, --list
-	    List mode. Just list the content paths.
+      List mode. Just list the content paths.
   -n, --name Filename
       Specify the destination file name. (in Encrypt mode)
       Default: e.g. FIRST_PATHNAME.2024-01-23.gzip.aes
@@ -101,7 +100,7 @@ encrypt() {
 
 decrypt() {
   for e in "${files[@]}"; do [[ -f $e ]] || error "$e: not a file" 2; done
-  tarOpt=(--extract --$compress --keep-newer-files --directory)
+  tarOpt=(--extract --$compress --directory)
   for e in "${files[@]}"; do
     if [[ $mode = list ]]; then
       [[ ! $quiet ]] && echo $Openssl -d -in \'$e\' \| tar --list --$compress
