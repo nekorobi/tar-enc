@@ -16,9 +16,10 @@ Usage:
 Options:
   -C, --camellia
       Use Camellia cipher.
-      Default: AES (aes-256-cbc, PBKDF2, sha-256)
+      Default: AES (aes-256-cbc, PBKDF2, sha-256, salt)
   -d, --decrypt
       Decrypt mode. (Default: Encrypt mode)
+      Note that this overwrites existing files.
   -D, --directory Path
       Specify the destination directory path. (in Encrypt and Decrypt mode)
       Default: current directory
