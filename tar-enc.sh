@@ -7,11 +7,10 @@ unset name files passOpt dry quiet; declare -a files
 
 help() {
   cat << END
+Usage: ./tar-enc.sh [Option]... File-or-Directory...
+
 Archive(Compress) and Encrypt(Symmetric cipher: openssl v3)
 files(directories) => a single encrypted file
-
-Usage:
-  ./tar-enc.sh [Option]... File-or-Directory...
 
 Options:
   -C, --camellia
@@ -44,6 +43,7 @@ Options:
   -q, --quiet    be as quiet as possible.
   -V, --version  show this version.
 
+tar-enc.sh v$version
 MIT License © 2024 Nekorobi
 END
 }
