@@ -1,4 +1,7 @@
 # tar-enc
+
+[![Test](https://github.com/nekorobi/tar-enc/actions/workflows/test.yml/badge.svg?branch=main)](https://github.com/nekorobi/tar-enc/actions)
+
 - Archive(Compress) and Encrypt(Symmetric cipher: openssl v3)
 - files(directories) => a single encrypted file
 
