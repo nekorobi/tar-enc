@@ -1,7 +1,7 @@
 #!/bin/bash
 # tar-enc.sh
 # MIT License © 2024 Nekorobi
-version='1.0.1'
+version='v1.0.2'
 compress=gzip  cipher=aes256  mode=encrypt  dir=. # current directory
 unset name files passOpt dry quiet; declare -a files
 
@@ -43,7 +43,7 @@ Options:
   -q, --quiet    be as quiet as possible.
   -V, --version  show this version.
 
-tar-enc.sh v$version
+tar-enc.sh $version
 MIT License © 2024 Nekorobi
 END
 }
